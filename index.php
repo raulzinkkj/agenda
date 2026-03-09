@@ -150,6 +150,17 @@ include 'conexao/conexao.php';
             margin-bottom: 20px; 
             padding: 10px 0 10px 0px;
         }
+        .save  {
+            background: white;
+            border-radius: 5px;
+            border: solid 1px gray; 
+            display: flex;  
+            align-items: center;
+            justify-content: center;
+        }
+        .save img {
+            width: 35px;
+        }
     </style>
 </head>
 
@@ -171,7 +182,7 @@ include 'conexao/conexao.php';
             <span><label for="data_final">Data Final</label></span>
             <input type="date" name="data_final" id="">
 
-            <button type="submit">Salvar</button>
+            <button type="submit" class="save"><img src="img/save.svg" alt="">Salvar</button>
         </form>
     </section>
     <section id="card">
@@ -266,15 +277,11 @@ include 'conexao/conexao.php';
                         echo "<div class='cel_tarefa'><p> de $data1"." a ". "$data2</p></div>";
 
                         echo "<div id= 'button_form'>"; 
-                            echo "<form action='api/status_concluido.php' method='get' class='button_form'>";
+                            echo "<form action='api/status_pendente.php' method='get' class='button_form'>";
                             echo "<input type='hidden' name='id' value='{$linha['id_agenda']}'>";
-                            echo "<button type='submit' class='status'><img src='img/check-solid-full.svg' alt=''>Concluído</button>";
+                            echo "<button type='submit' class='status'><img src='img/check-solid-full.svg' alt=''>Pendente</button>";
                             echo "</form>";
 
-                            echo "<form action='api/status_cancelado.php' method='get' class='button_form'>";
-                            echo "<input type='hidden' name='id' value='{$linha['id_agenda']}'>";
-                            echo "<button type='submit' class='status'><img src='img/x-solid-full.svg' alt=''> Cancelar</button>";
-                            echo "</form>";
                         echo "</div>";
                     echo "</div>";  
                 }
