@@ -113,6 +113,8 @@ include 'conexao/conexao.php';
             box-sizing: border-box;
             padding: 3px;
             margin-bottom: 10px;
+            resize: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .save {
