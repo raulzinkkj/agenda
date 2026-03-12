@@ -54,7 +54,7 @@ include 'conexao/conexao.php';
         }
 
         .container_usuario img {
-            width: 45px;
+            width: 60px;
             border-radius: 50%;
         }
 
@@ -249,7 +249,7 @@ include 'conexao/conexao.php';
                 <span>União da Vitória-PR</span>
             </div>
 
-            <img src="img/R.jpg" alt="user">
+            <img src="img/R.jpeg" alt="user">
         </div>
     </header>
 
